@@ -24,5 +24,5 @@ jobs:
       run: |
         echo ${{ secrets.MY_PASSWORD }}
         mvn -B package --file pom.xml
-        mvn com.google.cloud.tools:jib-maven-plugin:build -Djib.to.auth.username=247687009@qq.com -Djib.to.auth.password=${{ secrets.MY_PASSWORD }} -Djib.container.jvmFlags=--add-opens,java.base/sun.nio.ch=ALL-UNNAMED -Djib.from.image=freemanliu/openjre:11.0.5 -Dimage=registry.cn-shanghai.aliyuncs.com/spring-boot-operator/operator-demo:v1
+        mvn com.google.cloud.tools:jib-maven-plugin:build -Djib.to.auth.username=${{ secrets.MY_USERNAME }} -Djib.to.auth.password=${{ secrets.MY_PASSWORD }} -Djib.container.jvmFlags=--add-opens,java.base/sun.nio.ch=ALL-UNNAMED -Djib.from.image=${{ secrets.JDK_IMAGE_11 }} -Dimage=${{ secrets.REGISTRY }}/operator-demo:v1.0.0
 
