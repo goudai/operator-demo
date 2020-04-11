@@ -1,6 +1,0 @@
-mvn com.google.cloud.tools:jib-maven-plugin:build \
--Djib.to.auth.username=247687009@qq.com \
--Djib.to.auth.password=QT0jRZFlJ5sAzytgwRONuV599mhBMj \
--Djib.container.jvmFlags=--add-opens,java.base/sun.nio.ch=ALL-UNNAMED \
--Djib.from.image=freemanliu/openjre:11.0.5 \
--Dimage=registry.cn-shanghai.aliyuncs.com/qingmuio/operator-demo:v1.0.0
